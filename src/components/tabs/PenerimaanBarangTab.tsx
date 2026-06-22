@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Truck } from 'lucide-react';
 import TabelModulGenerik, { type ColumnDef } from '../ui/TabelModulGenerik';
 

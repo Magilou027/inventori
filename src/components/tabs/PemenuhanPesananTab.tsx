@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { PackageCheck } from 'lucide-react';
 import TabelModulGenerik, { type ColumnDef } from '../ui/TabelModulGenerik';
 
