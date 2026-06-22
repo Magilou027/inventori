@@ -1,6 +1,6 @@
 import { useState, useEffect, type ReactNode, type MouseEvent } from 'react';
 import {
-  LayoutDashboard, Users,
+  LayoutDashboard, Users, FileText,
 } from 'lucide-react';
 import type { TabItem, TabType, SidebarMenuName } from './types';
 import { Sidebar, Header, TabBar, SubHeader, Footer } from './components/layout';

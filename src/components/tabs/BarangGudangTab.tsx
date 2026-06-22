@@ -1,5 +1,5 @@
 import { Warehouse } from 'lucide-react';
-import TabelModulGenerik from '../ui/TabelModulGenerik';
+import TabelModulGenerik, { type ColumnDef } from '../ui/TabelModulGenerik';
 
 interface BarangGudang {
   gudang: string;
@@ -15,7 +15,7 @@ const DUMMY_DATA: BarangGudang[] = [
   { gudang: 'Gudang Jakbar', namaBarang: 'Keyboard Mechanical Keychron', kuantitas: '5', nilai: '6.000.000' },
 ];
 
-const COLUMNS = [
+const COLUMNS: ColumnDef<BarangGudang>[] = [
   { header: 'Gudang', accessorKey: 'gudang' },
   { header: 'Nama Barang', accessorKey: 'namaBarang' },
   { header: 'Kuantitas Stok', accessorKey: 'kuantitas' },

@@ -1,5 +1,5 @@
 import { PackageSearch } from 'lucide-react';
-import TabelModulGenerik from '../ui/TabelModulGenerik';
+import TabelModulGenerik, { type ColumnDef } from '../ui/TabelModulGenerik';
 
 interface BarangJasa {
   kode: string;
@@ -17,7 +17,7 @@ const DUMMY_DATA: BarangJasa[] = [
   { kode: 'ITEM-003', nama: 'Monitor LG UltraGear 27"', kategori: 'Elektronik', stok: '10', satuan: 'Unit', harga: '4.500.000' },
 ];
 
-const COLUMNS = [
+const COLUMNS: ColumnDef<BarangJasa>[] = [
   { header: 'Kode Barang', accessorKey: 'kode' },
   { header: 'Nama Barang', accessorKey: 'nama' },
   { header: 'Kategori', accessorKey: 'kategori' },

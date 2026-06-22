@@ -1,5 +1,5 @@
 import { TrendingDown } from 'lucide-react';
-import TabelModulGenerik from '../ui/TabelModulGenerik';
+import TabelModulGenerik, { type ColumnDef } from '../ui/TabelModulGenerik';
 
 interface StokMinimum {
   kode: string;
@@ -15,7 +15,7 @@ const DUMMY_DATA: StokMinimum[] = [
   { kode: 'ITEM-001', nama: 'Laptop ASUS ROG Strix', stok: '15', minimum: '5', status: 'Cukup' },
 ];
 
-const COLUMNS = [
+const COLUMNS: ColumnDef<StokMinimum>[] = [
   { header: 'Kode Barang', accessorKey: 'kode' },
   { header: 'Nama Barang', accessorKey: 'nama' },
   { header: 'Stok Saat Ini', accessorKey: 'stok' },

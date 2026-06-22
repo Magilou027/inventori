@@ -1,5 +1,5 @@
 import { ShoppingCart } from 'lucide-react';
-import TabelModulGenerik from '../ui/TabelModulGenerik';
+import TabelModulGenerik, { type ColumnDef } from '../ui/TabelModulGenerik';
 
 interface PesananPembelian {
   tanggal: string;
@@ -15,7 +15,7 @@ const PesananPembelianTab: React.FC = () => {
     { tanggal: '02/05/2026', noPo: 'PO/2026/05/002', pemasok: 'CV. Sinar Abadi', nilai: '15.750.000', status: 'Diproses' },
   ];
   
-  const COLUMNS = [
+  const COLUMNS: ColumnDef<PesananPembelian>[] = [
     { header: 'Tanggal', accessorKey: 'tanggal' },
     { header: 'No. PO', accessorKey: 'noPo' },
     { header: 'Pemasok', accessorKey: 'pemasok' },

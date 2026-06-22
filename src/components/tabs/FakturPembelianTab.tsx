@@ -1,5 +1,5 @@
 import { FileText } from 'lucide-react';
-import TabelModulGenerik from '../ui/TabelModulGenerik';
+import TabelModulGenerik, { type ColumnDef } from '../ui/TabelModulGenerik';
 
 interface FakturPembelian {
   tanggal: string;
@@ -13,7 +13,7 @@ const DUMMY_DATA: FakturPembelian[] = [
   { tanggal: '01/05/2026', noFaktur: 'PI/2026/05/001', pemasok: 'PT. Komputer Jaya', nilai: '277.500.000', status: 'Lunas' },
 ];
 
-const COLUMNS = [
+const COLUMNS: ColumnDef<FakturPembelian>[] = [
   { header: 'Tanggal', accessorKey: 'tanggal' },
   { header: 'No. Faktur', accessorKey: 'noFaktur' },
   { header: 'Pemasok', accessorKey: 'pemasok' },

@@ -1,7 +1,7 @@
-import { ReactNode, useState, useMemo } from 'react';
+import { type ReactNode, useState, useMemo } from 'react';
 import { Search, Plus, Package } from 'lucide-react';
 
-interface ColumnDef<T> {
+export interface ColumnDef<T> {
   header: string;
   accessorKey: keyof T;
 }
@@ -13,7 +13,7 @@ interface TabelModulGenerikProps<T> {
   data: T[];
 }
 
-const TabelModulGenerik = <T extends Record<string, any>>({ title, icon, columns, data }: TabelModulGenerikProps<T>) => {
+const TabelModulGenerik = <T extends Record<string, unknown>>({ title, icon, columns, data }: TabelModulGenerikProps<T>) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredData = useMemo(() => {
@@ -65,7 +65,7 @@ const TabelModulGenerik = <T extends Record<string, any>>({ title, icon, columns
                 {filteredData.map((row, rowIndex) => (
                   <tr key={rowIndex} className={`border-b border-gray-100 dark:border-slate-700 hover:bg-blue-50 dark:hover:bg-slate-700/50 cursor-pointer transition-colors ${rowIndex % 2 === 0 ? 'bg-white dark:bg-slate-800' : 'bg-gray-50/50 dark:bg-slate-800/50'}`}>
                     {columns.map((col) => (
-                      <td key={String(col.accessorKey)} className="py-3 px-4 text-sm text-gray-700 dark:text-gray-300">{row[col.accessorKey]}</td>
+                      <td key={String(col.accessorKey)} className="py-3 px-4 text-sm text-gray-700 dark:text-gray-300">{String(row[col.accessorKey])}</td>
                     ))}
                   </tr>
                 ))}

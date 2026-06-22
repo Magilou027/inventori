@@ -1,5 +1,5 @@
 import { Truck } from 'lucide-react';
-import TabelModulGenerik from '../ui/TabelModulGenerik';
+import TabelModulGenerik, { type ColumnDef } from '../ui/TabelModulGenerik';
 
 interface PenerimaanBarang {
   tanggal: string;
@@ -13,7 +13,7 @@ const DUMMY_DATA: PenerimaanBarang[] = [
   { tanggal: '01/05/2026', noPenerimaan: 'RI/2026/05/001', pemasok: 'PT. Komputer Jaya', gudang: 'Gudang Pusat', status: 'Selesai' },
 ];
 
-const COLUMNS = [
+const COLUMNS: ColumnDef<PenerimaanBarang>[] = [
   { header: 'Tanggal', accessorKey: 'tanggal' },
   { header: 'No. Penerimaan', accessorKey: 'noPenerimaan' },
   { header: 'Pemasok', accessorKey: 'pemasok' },

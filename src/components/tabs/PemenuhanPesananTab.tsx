@@ -1,5 +1,5 @@
 import { PackageCheck } from 'lucide-react';
-import TabelModulGenerik from '../ui/TabelModulGenerik';
+import TabelModulGenerik, { type ColumnDef } from '../ui/TabelModulGenerik';
 
 interface PemenuhanPesanan {
   tanggal: string;
@@ -15,7 +15,7 @@ const DUMMY_DATA: PemenuhanPesanan[] = [
   { tanggal: '01/05/2026', noDo: 'DO.2026.05.00006', pelanggan: 'Rosalia Chrestina', gudang: 'Gudang Pusat', status: 'Menunggu Dikirim' },
 ];
 
-const COLUMNS = [
+const COLUMNS: ColumnDef<PemenuhanPesanan>[] = [
   { header: 'Tanggal', accessorKey: 'tanggal' },
   { header: 'No. DO', accessorKey: 'noDo' },
   { header: 'Pelanggan', accessorKey: 'pelanggan' },
