@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {
-  BookOpen, Printer, ChevronDown, Loader2, FileDown,
+  BookOpen, ChevronDown, Loader2, FileDown,
 } from 'lucide-react';
 import type { Akun } from '../../App';
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {
-  Search, Plus, X, ChevronDown, Save, Paperclip,
+  Search, Plus, ChevronDown, Save, Paperclip,
 } from 'lucide-react';
 import InputRow from '../ui/InputRow';
 

@@ -1,4 +1,4 @@
-import { useState, FormEvent, useRef, useEffect } from 'react';
+import { useState, type FormEvent, useRef, useEffect } from 'react';
 import { Sparkles, ChevronRight, User } from 'lucide-react';
 
 const SUGGESTED_QUESTIONS: string[] = [

@@ -1,4 +1,4 @@
-import { useState, ReactNode, useMemo } from 'react';
+import { useState, type ReactNode, useMemo } from 'react';
 import { Files, Search } from 'lucide-react';
 import type { TabType } from '../../types';
 

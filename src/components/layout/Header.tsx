@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef, ReactNode } from 'react';
+import { useState, useEffect, useRef, type ReactNode } from 'react';
 import {
   Search, Bell, HelpCircle, Sun, Moon,
-  Users, FileText, ShoppingCart, Package, BookOpen, Settings2, LayoutDashboard,
+  Users, FileText, ShoppingCart, BookOpen, Settings2, LayoutDashboard,
   Store, Network, CheckSquare, Calendar as CalendarIcon, FileSpreadsheet,
   ClipboardList, PackageSearch, PackageCheck, Warehouse, TrendingDown,
   Truck, Calculator, Receipt, FileBox, Files, Sparkles
